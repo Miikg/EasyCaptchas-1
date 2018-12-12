@@ -44,11 +44,11 @@ function getCode($length, $chars) {
 *****************************************************************/
 
 /* APPEL DE LA FONCTION POUR RECUPERER UNE CHAINE ALEATOIRE */
-$code = getCode(10, $chaine);
+$code = getCode(5, $chaine);
 $_SESSION['code']=$code;
 /* RETOURNE UN A UN LES SEGMENTS DE LA CHAINE */
 
-for ($i = 1; $i <= 6; $i++) {
+for ($i = 1; $i <= 5; $i++) {
 ${'char'.$i}= substr($code,$i-1,1); 
 }
 
