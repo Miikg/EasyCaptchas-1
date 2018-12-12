@@ -56,11 +56,11 @@ ${'char'.$i}= substr($code,$i-1,1);
 * PARAMS : IMAGE / TAILLE / ANGLE / POSX / POSY / COULEUR/ POLICE / CARACTERE */
 
 imagettftext($image, 28, -10, 0, 37, $color, $font, $char1);
-imagettftext($image, 28, 20, 25, 37, $color, $font, $char2);
-imagettftext($image, 28, -35, 40, 37, $color, $font, $char3);
-imagettftext($image, 28, 25, 80, 37, $color, $font, $char4);
-imagettftext($image, 28, -15, 100, 37, $color, $font, $char5);
-imagettftext($image, 28, -10, 120, 37, $color, $font, $char6);
+imagettftext($image, 28, 20, 40, 37, $color, $font, $char2);
+imagettftext($image, 28, -35, 75, 37, $color, $font, $char3);
+imagettftext($image, 28, 25, 100, 37, $color, $font, $char4);
+imagettftext($image, 28, -15, 120, 37, $color, $font, $char5);
+
 
 
 /****************************************************************
