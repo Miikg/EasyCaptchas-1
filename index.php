@@ -5,7 +5,7 @@
 		
 	</head> 
 	<body>
-		<p>Veuillez saisir le code de securite ! </p>
+		<p><b>Veuillez saisir le code de securite ! </b></p>
 		<?php
 			
 			/* SCRIPT FRONTAL AFFICHAGE DE CAPTCHA
@@ -15,7 +15,8 @@
 
 		?>
 		<form id="formulaire" method="post" action="index.php">
-			<input type="text" id="code" name="code" onkeyup='this.value=this.value.toUpperCase()' required>
+			<input type="text" id="code" name="code" maxlength="5" placeholder="Remplir" 
+			onkeyup='this.value=this.value.toUpperCase()' required>
 			<input type="submit" id="envoi" name="envoi" value="Envoyer">
 		</form>
 		<?php
@@ -32,7 +33,6 @@
 			}
 		}
 			
-		
 		?>
 	
 	</body>
