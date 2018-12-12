@@ -44,22 +44,24 @@ function getCode($length, $chars) {
 *****************************************************************/
 
 /* APPEL DE LA FONCTION POUR RECUPERER UNE CHAINE ALEATOIRE */
-$code = getCode(5, $chaine);
+$code = getCode(10, $chaine);
 $_SESSION['code']=$code;
 /* RETOURNE UN A UN LES SEGMENTS DE LA CHAINE */
-$char1 = substr($code,0,1);
-$char2 = substr($code,1,1);
-$char3 = substr($code,2,1);
-$char4 = substr($code,3,1);
-$char5 = substr($code,4,1);
+
+for ($i = 1; $i <= 6; $i++) {
+${'char'.$i}= substr($code,$i-1,1); 
+}
 
 /* DESSINE UN TEXTE AVEC UNE POLICE TRUETYPE
 * PARAMS : IMAGE / TAILLE / ANGLE / POSX / POSY / COULEUR/ POLICE / CARACTERE */
+
 imagettftext($image, 28, -10, 0, 37, $color, $font, $char1);
-imagettftext($image, 28, 20, 37, 37, $color, $font, $char2);
-imagettftext($image, 28, -35, 55, 37, $color, $font, $char3);
-imagettftext($image, 28, 25, 100, 37, $color, $font, $char4);
-imagettftext($image, 28, -15, 120, 37, $color, $font, $char5);
+imagettftext($image, 28, 20, 25, 37, $color, $font, $char2);
+imagettftext($image, 28, -35, 40, 37, $color, $font, $char3);
+imagettftext($image, 28, 25, 80, 37, $color, $font, $char4);
+imagettftext($image, 28, -15, 100, 37, $color, $font, $char5);
+imagettftext($image, 28, -10, 120, 37, $color, $font, $char6);
+
 
 /****************************************************************
 * 4. PROCEDURES DE GENERATION DYNAMIQUE DE L'IMAGE
